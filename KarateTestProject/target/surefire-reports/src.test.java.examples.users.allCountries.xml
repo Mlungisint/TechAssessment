@@ -1,0 +1,85 @@
+<testsuite failures="2" name="src/test/java/examples/users/allCountries.feature" skipped="0" tests="3" time="39.839636">
+  <testcase classname="src.test.java.examples.users.allCountries" name="Ensure Correct API Endpoint Schema Configuration" time="33.4012">
+    <failure message="allCountries.feature:15 - evaluation (js) failed: &quot;&quot;########## Validate the response ##########&quot;, javax.script.ScriptException: &lt;eval&gt;:1:46 Missing close quote&#13;&#10;&quot;&quot;########## Validate the response ##########&quot;&#13;&#10;                                              ^ in &lt;eval&gt; at line number 1 at column number 46&#10;stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)">* url 'https://restcountries.com' ......................................... passed
+* header Accept = 'application/json' ...................................... passed
+Given path '/v3.1/all/' ................................................... passed
+And method get ............................................................ passed
+When status 200 ........................................................... passed
+* def info = ""########## Validate the response ##########" ............... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: allCountries.feature:15 - evaluation (js) failed: ""########## Validate the response ##########", javax.script.ScriptException: &lt;eval&gt;:1:46 Missing close quote&#13;
+""########## Validate the response ##########"&#13;
+                                              ^ in &lt;eval&gt; at line number 1 at column number 46
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)&#13;
+	at ✽.* def info = ""########## Validate the response ##########" (allCountries.feature:15)&#13;
+
+And print response ........................................................ skipped
+And match response== ...................................................... skipped</failure>
+  </testcase>
+  <testcase classname="src.test.java.examples.users.allCountries" name="As a map builder, I want to confirm that there are 195 countries in the world so that my maps are accurate and" time="3.085698">
+    <failure message="allCountries.feature:28 - syntax error, expected '==' for match">* url 'https://restcountries.com' ......................................... passed
+* header Accept = 'application/json' ...................................... passed
+Given path '/v3.1/all/' ................................................... passed
+And method get ............................................................ passed
+When status 200 ........................................................... passed
+* def info = ""########## Validate the response ##########" ............... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: allCountries.feature:15 - evaluation (js) failed: ""########## Validate the response ##########", javax.script.ScriptException: &lt;eval&gt;:1:46 Missing close quote&#13;
+""########## Validate the response ##########"&#13;
+                                              ^ in &lt;eval&gt; at line number 1 at column number 46
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)&#13;
+	at ✽.* def info = ""########## Validate the response ##########" (allCountries.feature:15)&#13;
+
+And print response ........................................................ skipped
+And match response== ...................................................... skipped
+* url 'https://restcountries.com' ......................................... passed
+* header Accept = 'application/json' ...................................... passed
+Given path '/v3.1/all/' ................................................... passed
+And method get ............................................................ passed
+When status 200 ........................................................... passed
+* def info = "########## Get number of Countries from the response ##########" . passed
+And match &lt;string&gt;&lt;param&gt;&lt;any&gt; ............................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: allCountries.feature:28 - syntax error, expected '==' for match&#13;
+	at ✽.And match &lt;string&gt;&lt;param&gt;&lt;any&gt; (allCountries.feature:28)</failure>
+  </testcase>
+  <testcase classname="src.test.java.examples.users.allCountries" name="Validate that Sign Language (SASL) is included in the list of South Africa's official languages." time="3.352738">
+    <system-out>* url 'https://restcountries.com' ......................................... passed
+* header Accept = 'application/json' ...................................... passed
+Given path '/v3.1/all/' ................................................... passed
+And method get ............................................................ passed
+When status 200 ........................................................... passed
+* def info = ""########## Validate the response ##########" ............... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: allCountries.feature:15 - evaluation (js) failed: ""########## Validate the response ##########", javax.script.ScriptException: &lt;eval&gt;:1:46 Missing close quote&#13;
+""########## Validate the response ##########"&#13;
+                                              ^ in &lt;eval&gt; at line number 1 at column number 46
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)&#13;
+	at ✽.* def info = ""########## Validate the response ##########" (allCountries.feature:15)&#13;
+
+And print response ........................................................ skipped
+And match response== ...................................................... skipped
+* url 'https://restcountries.com' ......................................... passed
+* header Accept = 'application/json' ...................................... passed
+Given path '/v3.1/all/' ................................................... passed
+And method get ............................................................ passed
+When status 200 ........................................................... passed
+* def info = "########## Get number of Countries from the response ##########" . passed
+And match &lt;string&gt;&lt;param&gt;&lt;any&gt; ............................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: allCountries.feature:28 - syntax error, expected '==' for match&#13;
+	at ✽.And match &lt;string&gt;&lt;param&gt;&lt;any&gt; (allCountries.feature:28)&#13;
+
+* url 'https://restcountries.com' ......................................... passed
+* header Accept = 'application/json' ...................................... passed
+Given path '/v3.1/all/' ................................................... passed
+And method get ............................................................ passed
+When status 200 ........................................................... passed
+* def languages = ......................................................... passed</system-out>
+  </testcase>
+</testsuite>

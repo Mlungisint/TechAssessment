@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>TestOne.countries.allCountries</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">0</div>
+            
+<div class="bg-danger" id="nav-fail">3</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2025-02-23 10:34:55 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item failed">
+<a href="#[1:12]">[1:12] Ensure Correct API Endpoint Schema Configuration </a>
+</div>
+<div class="nav-item failed">
+<a href="#[2:27]">[2:27] Validate that there are 195 countries for map building </a>
+</div>
+<div class="nav-item failed">
+<a href="#[3:46]">[3:46] Validate that Sign Language (SASL) is included in the list of South Africa's official languages. </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">TestOne/countries/allCountries.feature</span><span class="feature-description">Back-End Validation</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:12]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:12]</span><span class="scenario-name">Ensure Correct API Endpoint Schema Configuration </span>
+</div>
+<div class="scenario-time failed">ms: 9152</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1:12]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1:12]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">* url 'https://restcountries.com'</div>
+</div>
+<div class="time-cell passed">13</div>
+</div>
+<div class="step-row" data-parent="[1:12]bg">
+<div class="step-container" id="2">
+<div class="step-ref bg-step">2</div>
+<div class="step-cell passed">* header Accept = 'application/json'</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">Given path '/v3.1/all/'</div>
+</div>
+<div class="time-cell passed">28</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">When method get</div>
+</div>
+<div class="time-cell passed">9075</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">* def info = "########## Validate the response ##########"</div>
+</div>
+<div class="time-cell passed">9</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref failed">7</div>
+<div class="step-cell failed">* def originalSchema = read("./all.json/")</div>
+</div>
+<div class="time-cell failed">19</div>
+</div>
+<div class="preformatted" data-parent="7">allCountries.feature:17 - could not find or read file: ./all.json/</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref skipped">8</div>
+<div class="step-cell skipped">And print originalSchema</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref skipped">9</div>
+<div class="step-cell skipped">And match response ==</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="preformatted" data-parent="9">'#[] ##(originalSchema)'</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2:27]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [2:27]</span><span class="scenario-name">Validate that there are 195 countries for map building </span>
+</div>
+<div class="scenario-time failed">ms: 9428</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[2:27]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[2:27]bg">
+<div class="step-container" id="10">
+<div class="step-ref bg-step">10</div>
+<div class="step-cell passed">* url 'https://restcountries.com'</div>
+</div>
+<div class="time-cell passed">9</div>
+</div>
+<div class="step-row" data-parent="[2:27]bg">
+<div class="step-container" id="11">
+<div class="step-ref bg-step">11</div>
+<div class="step-cell passed">* header Accept = 'application/json'</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">Given path '/v3.1/all/'</div>
+</div>
+<div class="time-cell passed">28</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">And method get</div>
+</div>
+<div class="time-cell passed">7958</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">When status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
+<div class="step-cell passed">Then print response</div>
+</div>
+<div class="time-cell passed">846</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment">#    ######using population as a unique property to count country objects #####</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="16">
+<div class="step-ref passed">16</div>
+<div class="step-cell passed">* def population = $..population</div>
+</div>
+<div class="time-cell passed">327</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment">#    * def expectedCount = 195</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="17">
+<div class="step-ref passed">17</div>
+<div class="step-cell passed">* def expectedCount = 255</div>
+</div>
+<div class="time-cell passed">30</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref failed"></div>
+<div class="step-cell comment">#    Then print population</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="18">
+<div class="step-ref failed">18</div>
+<div class="step-cell failed">* assert population.length == expectedCount</div>
+</div>
+<div class="time-cell failed">222</div>
+</div>
+<div class="preformatted" data-parent="18">allCountries.feature:37 - assert evaluated to false: population.length == expectedCount</div>
+<div class="step-row">
+<div class="step-container" id="19">
+<div class="step-ref skipped">19</div>
+<div class="step-cell skipped">* def actualCount = population.length</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="20">
+<div class="step-ref skipped">20</div>
+<div class="step-cell skipped">And print actualCount</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="21">
+<div class="step-ref skipped">21</div>
+<div class="step-cell skipped">And print 'actualCount :',actualCount</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[3:46]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [3:46]</span><span class="scenario-name">Validate that Sign Language (SASL) is included in the list of South Africa's official languages. </span>
+</div>
+<div class="scenario-time failed">ms: 10817</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[3:46]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[3:46]bg">
+<div class="step-container" id="22">
+<div class="step-ref bg-step">22</div>
+<div class="step-cell passed">* url 'https://restcountries.com'</div>
+</div>
+<div class="time-cell passed">9</div>
+</div>
+<div class="step-row" data-parent="[3:46]bg">
+<div class="step-container" id="23">
+<div class="step-ref bg-step">23</div>
+<div class="step-cell passed">* header Accept = 'application/json'</div>
+</div>
+<div class="time-cell passed">27</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="24">
+<div class="step-ref passed">24</div>
+<div class="step-cell passed">Given path '/v3.1/all/'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="25">
+<div class="step-ref passed">25</div>
+<div class="step-cell passed">When method get</div>
+</div>
+<div class="time-cell passed">10758</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="26">
+<div class="step-ref passed">26</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="27">
+<div class="step-ref passed">27</div>
+<div class="step-cell passed">* def saslSchema = {SASL:'#present'}</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="28">
+<div class="step-ref passed">28</div>
+<div class="step-cell passed">And print response.[21].languages</div>
+</div>
+<div class="time-cell passed">11</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="29">
+<div class="step-ref failed">29</div>
+<div class="step-cell failed">And match response.[21].languages contains any saslSchema</div>
+</div>
+<div class="time-cell failed">10</div>
+</div>
+<div class="preformatted" data-parent="29">allCountries.feature:52 - path: $.[21].languages, actual: {"zul":"Zulu","tso":"Tsonga","ssw":"Swazi","nbl":"Southern Ndebele","sot":"Southern Sotho","nso":"Northern Sotho","afr":"Afrikaans","tsn":"Tswana","ven":"Venda","xho":"Xhosa","eng":"English"}, expected: {SASL=#present}, reason: no key-values matched</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>
