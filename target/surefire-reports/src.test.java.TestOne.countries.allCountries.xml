@@ -1,0 +1,94 @@
+<testsuite failures="3" name="src/test/java/TestOne/countries/allCountries.feature" skipped="0" tests="3" time="71.715252">
+  <testcase classname="src.test.java.TestOne.countries.allCountries" name="Ensure Correct API Endpoint Schema Configuration" time="48.286736">
+    <failure message="allCountries.feature:17 - could not find or read file: ./all.json/">* url 'https://restcountries.com' ......................................... passed
+* header Accept = 'application/json' ...................................... passed
+Given path '/v3.1/all/' ................................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* def info = "########## Validate the response ##########"; ............... passed
+* def originalSchema = read("./all.json/") ................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: allCountries.feature:17 - could not find or read file: ./all.json/&#13;
+	at ✽.* def originalSchema = read("./all.json/") (allCountries.feature:17)&#13;
+
+And print originalSchema .................................................. skipped
+And match response == ..................................................... skipped</failure>
+  </testcase>
+  <testcase classname="src.test.java.TestOne.countries.allCountries" name="Validate that there are 195 countries for map building" time="18.326973">
+    <failure message="allCountries.feature:36 - assert evaluated to false: population.length == expectedCount">* url 'https://restcountries.com' ......................................... passed
+* header Accept = 'application/json' ...................................... passed
+Given path '/v3.1/all/' ................................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* def info = "########## Validate the response ##########"; ............... passed
+* def originalSchema = read("./all.json/") ................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: allCountries.feature:17 - could not find or read file: ./all.json/&#13;
+	at ✽.* def originalSchema = read("./all.json/") (allCountries.feature:17)&#13;
+
+And print originalSchema .................................................. skipped
+And match response == ..................................................... skipped
+* url 'https://restcountries.com' ......................................... passed
+* header Accept = 'application/json' ...................................... passed
+Given path '/v3.1/all/' ................................................... passed
+And method get ............................................................ passed
+When status 200 ........................................................... passed
+* def population = $..population .......................................... passed
+* def expectedCount = 195 ................................................. passed
+* assert population.length == expectedCount ............................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: allCountries.feature:36 - assert evaluated to false: population.length == expectedCount&#13;
+	at ✽.* assert population.length == expectedCount (allCountries.feature:36)&#13;
+
+* def actualCount = population.length ..................................... skipped
+And print actualCount ..................................................... skipped
+And print 'actualCount :',actualCount ..................................... skipped</failure>
+  </testcase>
+  <testcase classname="src.test.java.TestOne.countries.allCountries" name="Validate that Sign Language (SASL) is included in the list of South Africa's official languages." time="5.101543">
+    <failure message="allCountries.feature:51 - path: $.[21].languages, actual: {&quot;zul&quot;:&quot;Zulu&quot;,&quot;tso&quot;:&quot;Tsonga&quot;,&quot;ssw&quot;:&quot;Swazi&quot;,&quot;nbl&quot;:&quot;Southern Ndebele&quot;,&quot;sot&quot;:&quot;Southern Sotho&quot;,&quot;nso&quot;:&quot;Northern Sotho&quot;,&quot;afr&quot;:&quot;Afrikaans&quot;,&quot;tsn&quot;:&quot;Tswana&quot;,&quot;ven&quot;:&quot;Venda&quot;,&quot;xho&quot;:&quot;Xhosa&quot;,&quot;eng&quot;:&quot;English&quot;}, expected: {SASL=#present}, reason: no key-values matched">* url 'https://restcountries.com' ......................................... passed
+* header Accept = 'application/json' ...................................... passed
+Given path '/v3.1/all/' ................................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* def info = "########## Validate the response ##########"; ............... passed
+* def originalSchema = read("./all.json/") ................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: allCountries.feature:17 - could not find or read file: ./all.json/&#13;
+	at ✽.* def originalSchema = read("./all.json/") (allCountries.feature:17)&#13;
+
+And print originalSchema .................................................. skipped
+And match response == ..................................................... skipped
+* url 'https://restcountries.com' ......................................... passed
+* header Accept = 'application/json' ...................................... passed
+Given path '/v3.1/all/' ................................................... passed
+And method get ............................................................ passed
+When status 200 ........................................................... passed
+* def population = $..population .......................................... passed
+* def expectedCount = 195 ................................................. passed
+* assert population.length == expectedCount ............................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: allCountries.feature:36 - assert evaluated to false: population.length == expectedCount&#13;
+	at ✽.* assert population.length == expectedCount (allCountries.feature:36)&#13;
+
+* def actualCount = population.length ..................................... skipped
+And print actualCount ..................................................... skipped
+And print 'actualCount :',actualCount ..................................... skipped
+* url 'https://restcountries.com' ......................................... passed
+* header Accept = 'application/json' ...................................... passed
+Given path '/v3.1/all/' ................................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* def saslSchema = {SASL:'#present'} ...................................... passed
+And print response.[21].languages ......................................... passed
+And match response.[21].languages contains any saslSchema ................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: allCountries.feature:51 - path: $.[21].languages, actual: {"zul":"Zulu","tso":"Tsonga","ssw":"Swazi","nbl":"Southern Ndebele","sot":"Southern Sotho","nso":"Northern Sotho","afr":"Afrikaans","tsn":"Tswana","ven":"Venda","xho":"Xhosa","eng":"English"}, expected: {SASL=#present}, reason: no key-values matched&#13;
+	at ✽.And match response.[21].languages contains any saslSchema (allCountries.feature:51)</failure>
+  </testcase>
+</testsuite>
