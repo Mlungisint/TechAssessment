@@ -14,11 +14,11 @@ Feature: Back-End Validation
     When method get
     Then status 200
    * def info = "########## Validate the response ##########";
-   * def originalSchema = read("./all.json/")
+   * def originalSchema = read("/all.json/")
     And print originalSchema
     And match response ==
   """
-  '#[] ##(originalSchema)'
+  '#[] #(originalSchema)'
   """
 
 
