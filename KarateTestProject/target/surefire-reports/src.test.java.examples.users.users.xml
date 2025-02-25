@@ -1,9 +1,0 @@
-<testsuite failures="0" name="src/test/java/examples/users/users.feature" skipped="0" tests="1" time="9.734879">
-  <testcase classname="src.test.java.examples.users.users" name="Scheme Validation" time="9.734879">
-    <system-out>* url 'https://restcountries.com' ......................................... passed
-* header Accept = 'application/json' ...................................... passed
-Given path '/v3.1/all/' ................................................... passed
-And method get ............................................................ passed
-When status 200 ........................................................... passed</system-out>
-  </testcase>
-</testsuite>
